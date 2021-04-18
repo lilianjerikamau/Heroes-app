@@ -1,0 +1,47 @@
+.landing-img {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    height: 500px;
+    width: 800px;
+    /* bring your own prefixes */
+    transform: translate(-50%, -50%);
+}
+html{
+    background-color: #12232E;
+}
+
+
+ nav a {
+     /*position: absolute;*/
+    float: right;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+/* Change the color of links on hover */
+ nav a:hover {
+    background-color: #007CC7;
+    color: #4DA8DA;
+}
+
+/* Add a color to the active/current link */
+ nav a.active {
+    background-color:#4DA8DA ;
+    color: #007CC7;
+}
+
+ nav .hero-desc{
+    align-content: center;
+    display: flex;
+    flex-direction: column;
+}
+/*.hero-desc h3{*/
+/*    position: absolute;*/
+/*    display: flex;*/
+/*    flex-direction: column;*/
+
+/*}*/
