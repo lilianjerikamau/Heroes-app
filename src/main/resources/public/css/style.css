@@ -1,14 +1,16 @@
 .landing-img {
-    position: fixed;
-    top: 50%;
-    left: 50%;
+    float: left;
+    /*position: fixed;*/
+    /*top: 50%;*/
+    /*left: 50%;*/
     height: 500px;
-    width: 800px;
+    width: 500px;
     /* bring your own prefixes */
-    transform: translate(-50%, -50%);
+    /*transform: translate(-50%, -50%);*/
 }
 html{
     background-color: #12232E;
+    background-image: url("/public/img/hero.jpg");
 }
 
 
