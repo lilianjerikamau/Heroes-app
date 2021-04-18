@@ -1,16 +1,24 @@
 {{#partial "content"}}
-    <section class="landing-pg">
-        <div class="land-left"></div>
-        <div class="land-right"></div>
-        <form class="form" action="/new/hero" method="post">
-            <h1>Create Your Hero</h1>
-            <input type="text" placeholder="Enter your hero's name" name="name" required>
-            <input type="number" placeholder="Enter your hero's age" name="age" required>
-            <input type="text" placeholder="Enter your hero's special powers" name="power" required>
-            <input type="text" placeholder="Enter your hero's weakness" name="weakness" required>
-
-            <input class="btns" type="submit">
-        </form>
+    <section>
+<form  class="form hero-form" action="/new/hero" method="post" style="width: 30rem; align-content: center">
+    <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" class="form-control" id="name" aria-describedby="emailHelp" placeholder="Hero's Name" name="name" required>
+    </div>
+    <div class="form-group">
+        <label for="age">Age</label>
+        <input type="number" class="form-control" id="age" placeholder="Age" name="age">
+    </div>
+    <div class="form-group">
+        <label for="power">Power</label>
+        <input type="text" class="form-control" id="power" name="power" placeholder="Power">
+    </div>
+    <div class="form-group">
+        <label for="power">Weakness</label>
+        <input type="text" class="form-control" id="weakness" name="weakness" placeholder="weakness" >
+    </div>
+    <button type="submit" class="btn btn-primary hero-btn">Submit</button>
+</form>
     </section>
 {{/partial}}
 {{> layout.hbs}}

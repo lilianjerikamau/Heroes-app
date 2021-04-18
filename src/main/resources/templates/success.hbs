@@ -1,20 +1,15 @@
-{{#partial "content"}}
-    <section class="landing-pg">
-        <div class="land-left">
+
+
+    {{#partial "content"}}
+        <div class = "container">
+        <section class="landing-pg">
+                <h3 style="color: #4DA8DA">Success <br>  <span>{{ item }} </span> <br> Has been created <br>{{sqId}}</h3>
+            <ul>
+                <a class="btn btn-primary" href="/hero">View Heroes</a>
+                <a class="btn btn-primary" href="/squad">View Squads</a>
+            </ul>
+
+        </section>
         </div>
-        <div class="land-right">
-        </div>
-
-        <div class="success">
-            <!--            <h3>Success <br>  <span>{{ item }} </span> <br> Has been created</h3>-->
-
-            <h3>Success <br>  <span>{{ item }} </span> <br> Has been created <br>{{sqId}}</h3>
-
-            <a class="btns btn-green" href="/hero">View Heroes</a>
-            <a class="btns btn-green" href="/squad">View Squads</a>
-
-
-        </div>
-    </section>
-{{/partial}}
-{{> layout.hbs}}
+    {{/partial}}
+    {{> layout.hbs}}
