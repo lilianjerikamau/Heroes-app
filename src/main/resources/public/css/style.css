@@ -17,7 +17,9 @@ body{
 .hero-btn{
     align-items: center;
 }
-
+.container{
+    color: white;
+}
 
  nav a {
      /*position: absolute;*/
