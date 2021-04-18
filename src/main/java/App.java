@@ -62,17 +62,17 @@ public class App {
             Map<String, Object> model = new HashMap<>();
             ArrayList<Squad> squads = Squad.getInstances();
             model.put("squads",squads);
-            ArrayList<Heroes> members = Heroes.getInstances();
-            model.put("heroes",members);
-            Squad newSquad = Squad.findBySquadId(1);
-            model.put("allSquadMembers", newSquad.getSquadHeroes());
+            ArrayList<Heroes> heroes = Heroes.getInstances();
+            model.put("heroes",heroes);
+            Squad newSquad = Squad.findById(1);
+            model.put("allSquadHeroes", newSquad.getSquadHeroes());
             return new ModelAndView(model, "squad.hbs");
         }, new HandlebarsTemplateEngine());
 //
         post("/squad/new",(req,res)-> {
             Map<String, Object> model = new HashMap<>();
             String name = req.queryParams("name");
-            Integer size = Integer.parseInt(req.queryParams("size"));
+            int size = Integer.parseInt(req.queryParams("size"));
             String mission = req.queryParams("mission");
             Squad newSquad = new Squad(name,mission,size);
             req.session().attribute("item",name);
@@ -105,7 +105,7 @@ public class App {
             Map<String, Object> model = new HashMap<>();
             int id= Integer.parseInt(req.params(":id"));
             Heroes newMember = Heroes.findById(id);
-            Squad newSquad = Squad.findBySquadId(1);
+            Squad newSquad = Squad.findById(1);
             newSquad.setSquadHeroes(newMember);
             model.put("item", newMember.getName());
             model.put("newHero",newSquad.getName());

@@ -21,14 +21,14 @@
                         <div class="squad-cont">
                             <img src="" alt="">
                             <div>
-                                <h1>{{ squadName }} </h1>
-                                <p>Purpose: {{cause}}</p>
+                                <h1>{{ name }} </h1>
+                                <p>Purpose: {{mission}}</p>
                                 <p>Max participants: {{ size }}</p>
                                 <br><br>
                                 <h3>MEMBERS</h3>
-                                <a class="btns" href="/new/member/{{squadId}}">Bind Id</a>
+                                <a class="btns" href="/new/member/{{id}}">Bind Id</a>
                                 <button class="addMember add-btn" >Add New Member</button>
-                                {{#each squadMembers}}
+                                {{#each squadHeroes}}
                                     <div class="member-cont">
                                         <h5>Name: {{this.name}}</h5>
                                         <h5>Power: {{power}}</h5>
