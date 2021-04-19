@@ -1,8 +1,10 @@
+
 .card {
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+
 }
 body{
     background-color: #12232E;
@@ -20,7 +22,20 @@ body{
 .container{
     color: white;
 }
-
+.squad-cont{
+    display: inline-block;
+}
+.member-cont{
+    display:inline-block;
+}
+.table{
+    color: white;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+section{
+    color: white;
+}
  nav a {
      /*position: absolute;*/
     float: right;
@@ -36,6 +51,9 @@ body{
     background-color: #007CC7;
     color: #4DA8DA;
 }
+ .default{
+     background-image: url("/public/img/hero.jpg");
+ }
 
 /* Add a color to the active/current link */
  nav a.active {

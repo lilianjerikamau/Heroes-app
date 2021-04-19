@@ -37,11 +37,6 @@ public class Squad {
     public int getSize() {
         return size;
     }
-
-    public static ArrayList<Heroes> getSquadHeroes() {
-        return squadHeroes;
-    }
-
     public static ArrayList<Squad> getInstances() {
         return instances;
     }
@@ -51,9 +46,15 @@ public class Squad {
     public void setSquadHeroes(Heroes newMember) {
         squadHeroes.add(newMember);
     }
+    public ArrayList<Heroes> getSquadHeroes(){
+        return squadHeroes;
+    }
     public static void clearAllSquads(){ instances.clear(); }
     public void clearAllSquadHeroes(){ getSquadHeroes().clear(); }
 
     public static Squad createNewSquad(){return new Squad("Avengers","fight crime",5);}
     public static Squad createNewSquad1(){return new Squad("Teen Titans","rescue animals",3);}
+
+
+
 }

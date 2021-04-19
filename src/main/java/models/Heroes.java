@@ -39,15 +39,16 @@ public Heroes(String name ,int age,String power,String weakness){
         return weakness;
     }
     public static Heroes findById(int id) {return instances.get(id-1);}
-
+    public static void clearAllHeroes(){instances.clear();}
     public static  Heroes createNewHero(){
-    return new Heroes("Lilian",23,"Flying","Fire");
+    return new Heroes("Superman",23,"Flying","Fire");
     }
     public static  Heroes createNewHero1(){
-        return new Heroes("Grace",22,"Running","Strength");
+        return new Heroes("Batman",22,"Running","Strength");
     }
     public static  Heroes createNewHero3(){
-        return new Heroes("Eda",20,"Strength","Running");
+        return new Heroes("Ironman",20,"Light","Running");
     }
+
 
 }

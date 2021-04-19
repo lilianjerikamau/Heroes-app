@@ -13,7 +13,7 @@ public class App {
     public static void main(String[] args){
 
         ProcessBuilder process = new ProcessBuilder();
-        Integer port;
+        int port;
 
         if (process.environment().get("PORT") != null) {
             port = Integer.parseInt(process.environment().get("PORT"));
@@ -83,7 +83,7 @@ public class App {
         post("/new/hero",(req, res) ->{
             Map<String, Object> model = new HashMap<>();
             String name = req.queryParams("name");
-            Integer age = Integer.parseInt(req.queryParams("age"));
+            int age = Integer.parseInt(req.queryParams("age"));
             String power = req.queryParams("power");
             String weakness = req.queryParams("weakness");
             Heroes newHero = new Heroes(name,age,power,weakness);
@@ -93,9 +93,9 @@ public class App {
             return new ModelAndView(model, "success.hbs");
         }, new HandlebarsTemplateEngine());
 //
-        get("/new/member/:squadId",(req,res)->{
+        get("/new/member/:id",(req,res)->{
             Map<String, Object> model = new HashMap<>();
-            req.session().attribute("selectedSquad",req.params("squadId"));
+            req.session().attribute("selectedSquad",req.params("id"));
             model.put("selectedSquad", req.session().attribute("selectedSquad"));
             model.put("item",1);
             return new ModelAndView(model, "success.hbs");

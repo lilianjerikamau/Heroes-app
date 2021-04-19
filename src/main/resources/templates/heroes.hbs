@@ -1,19 +1,31 @@
-
 {{#partial "content"}}
     <div class="container">
-        <section class="landing-pg">
-                    {{#each hero}}
-                            <p>Name: {{ name }} </p>
-                            <p>Age: {{ age }}</p>
-                            <p>Special power: {{ power }}</p>
-                            <p>Weakness: {{ weakness }}</p>
-                        <ul>
-                            <a href="new/{{id}}" class="btn btn-primary">Learn More</a>
-                            <a href="/squad" class="btn btn-primary">Add {{ name }} To Squad</a>
-                        </ul>
-                    {{/each}}
-        </section>
-    </div>
-
+    <h2>HEROES</h2>
+{{#each hero}}
+        <table class="table">
+            <thead>
+            <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Age</th>
+                <th scope="col">Power</th>
+                <th scope="col">Weakness</th>
+                <th scope="col">Action</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>{{ name }}</td>
+                <td>{{ age }}</td>
+                <td>{{ power }}</td>
+                <td>{{ weakness }}</td>
+                <td><a class="btn btn-primary" href="/squad/new/{{id}}">Add To Squad</a>
+                    <a href="new/{{id}}" class="btn btn-primary">Learn More</a></td>
+            </tr>
+            </tbody>
+        </table>
+{{/each}}
+        <a href="/hero-form"><button class="btn btn-primary">Create Hero</button></a>
+        </div>
 {{/partial}}
-{{> layout.hbs}}
+    {{> layout.hbs}}
+

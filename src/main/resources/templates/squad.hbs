@@ -1,54 +1,130 @@
+
 {{#partial "content"}}
-    <div class="container">
-        <section class="landing-pg">
+    {{#if squads}}
+<div class="container">
+    <h2>SQUADS</h2>
+    {{#each squads}}
+    <table class="table">
+        <thead>
+        <tr>
 
-                    {{#each heroes}}
-                        <div class="hero-item">
-                            <img src="/img/DIAMONDHEAD06_4C.png" alt="">
-                            <div class="hero-detail">
-                                <p>Name: {{name}}</p>
-                                <p>Super power: {{ power }}</p>
-                                <a class="btns" href="/squad/new/{{id}}">Add To Squad</a>
+            <th scope="col">Name</th>
+            <th scope="col">Mission</th>
+            <th scope="col">Size</th>
+            <th scope="col">Members</th>
+            <th scope="col">Action</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>{{ name }}</td>
+            <td> {{mission}}</td>
+            <td>{{ size }}</td>
+            <td>{{#each squadMembers}}
+                {{this.name}}
+            {{/each}}</td>
+            <td>
+            <a class="btn btn-primary" href="/new/member/{{id}}">Add member</a>
+        </td>
+        </tr>
+        </tbody>
+    </table>
 
-                    {{/each}}
-            <h2>
-                <a class="btns" href="/squad-form">Create Your Squad</a>
-                <br><br>
-                {{#if squads}}
-                    AVAILABLE SQUADS
-                </h2>
-                    {{#each squads}}
-                        <div class="squad-cont">
-                            <img src="" alt="">
-                            <div>
-                                <h1>{{ name }} </h1>
-                                <p>Purpose: {{mission}}</p>
-                                <p>Max participants: {{ size }}</p>
-                                <br><br>
-                                <h3>MEMBERS</h3>
-                                <a class="btns" href="/new/member/{{id}}">Bind Id</a>
-                                <button class="addMember add-btn" >Add New Member</button>
-                                {{#each squadHeroes}}
-                                    <div class="member-cont">
-                                        <h5>Name: {{this.name}}</h5>
-                                        <h5>Power: {{power}}</h5>
-                                        <Button class="btns">Remove</Button>
-                                    </div>
-                                {{/each}}
-                            </div>
-                        </div>
-                    {{/each}}
-                {{else}}
-                    <h2>Please create a squad to continue</h2>
-                {{/if}}
-            </div>
+        {{/each}}
+    <br>
+    <a class="btn btn-primary" href="/squad-form">Create Your Squad</a>
+    <br><br>
+    <h2>HEROES</h2>
+    {{#each heroes}}
 
-        </section>
-    </div>
+        <table class="table">
+            <thead>
+            <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Age</th>
+                <th scope="col">Power</th>
+                <th scope="col">Weakness</th>
+                <th scope="col">Action</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
 
+                <td>{{ name }}</td>
+                <td>{{ age }}</td>
+                <td>{{ power }}</td>
+                <td>{{ weakness }}</td>
+               <td><a class="btn btn-primary" href="/squad/new/{{id}}">Add To Squad</a></td>
+            </tr>
+            </tbody>
+        </table>
+    {{/each}}
+</div>
+{{else}}
+    <h2>Please create a squad to continue</h2>
+{{/if}}
 {{/partial}}
-{{#partial "footer"}}
-    <script type="text/javascript" src="/js/jquery-3.4.0.min.js"></script>
-    <script type="text/javascript" src="/js/script.js"></script>
-{{/partial}}
-{{> layout.hbs}}
+        {{> layout.hbs}}
+
+<!--{{#partial "content"}}-->
+<!--    <section class="landing-pg">-->
+<!--        <div class="land-left">-->
+<!--        </div>-->
+<!--        <div class="land-right">-->
+<!--        </div>-->
+
+<!--        <div class="squad">-->
+<!--            <div id="newMember">-->
+<!--                <p class="close">&cross;</p>-->
+<!--                <h2>Choose Squad Members</h2>-->
+<!--                {{#each heroes}}-->
+<!--                    <div class="hero-item">-->
+<!--                        <img src="/img/DIAMONDHEAD06_4C.png" alt="">-->
+<!--                        <div class="hero-detail">-->
+<!--                            <p>Name: {{name}}</p>-->
+<!--                            <p>Super power: {{ power }}</p>-->
+<!--                            <a class="btns" href="/squad/new/{{id}}">Add To Squad</a>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                {{/each}}-->
+<!--            </div>-->
+<!--        <h2>-->
+<!--            <a class="btns" href="/squad-form">Create Your Squad</a>-->
+<!--            <br><br>-->
+<!--            {{#if squads}}-->
+<!--                AVAILABLE SQUADS-->
+<!--            </h2>-->
+<!--                {{#each squads}}-->
+<!--                    <div class="squad-cont">-->
+<!--                        <img src="" alt="">-->
+<!--                        <div>-->
+<!--                            <h1>{{ name }} </h1>-->
+<!--                            <p>Id: {{id}}</p>-->
+<!--                            <p>Purpose: {{mission}}</p>-->
+<!--                            <p>Max participants: {{ size }}</p>-->
+<!--                            <br><br>-->
+<!--                            <h3>MEMBERS</h3>-->
+<!--                            <a class="btns" href="/new/member/{{id}}">Bind Id</a>-->
+<!--                            <button class="addMember add-btn" >Add New Member</button>-->
+<!--                            {{#each squadHeroes}}-->
+<!--                                <div class="member-cont">-->
+<!--                                    <h5>Name: {{this.name}}</h5>-->
+<!--                                    <h5>Power: {{power}}</h5>-->
+<!--                                    <Button class="btns">Remove</Button>-->
+<!--                                </div>-->
+<!--                            {{/each}}-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                {{/each}}-->
+<!--            {{else}}-->
+<!--                <h2>Please create a squad to continue</h2>-->
+<!--            {{/if}}-->
+<!--        </div>-->
+
+<!--    </section>-->
+<!--{{/partial}}-->
+<!--{{#partial "footer"}}-->
+<!--    <script type="text/javascript" src="/js/jquery-3.4.0.min.js"></script>-->
+<!--    <script type="text/javascript" src="/js/script.js"></script>-->
+<!--{{/partial}}-->
+<!--{{> layout.hbs}}-->
