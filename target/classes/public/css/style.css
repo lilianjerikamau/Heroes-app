@@ -1,0 +1,93 @@
+
+.spiderman {
+    position: fixed;
+    top: 50%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+
+}
+.text-center{
+    color: black;
+}
+.suicide-squad{
+    float: left;
+    top: 100%;
+}
+.heading{
+    position: fixed;
+    top: 100%;
+    left: 20%;
+
+}
+.about{
+    position: fixed;
+    float: right;
+    left: 100%;
+}
+body{
+    background-color: #12232E;
+    background-image: url("https://fastly.syfy.com/sites/syfy/files/styles/1200x680/public/2020/08/the-seven-the-boys-season-2.jpg?offset-y=0");
+    object-fit: cover;
+
+}
+.hero-form{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.hero-btn{
+    align-items: center;
+}
+.container{
+    color: black;
+}
+.squad-cont{
+    display: inline-block;
+}
+.member-cont{
+    display:inline-block;
+}
+.table{
+    color: white;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+section{
+    color: white;
+}
+.btn-primary{
+    color: white;
+    background-color: black;
+    margin-top: 10px;
+}
+form{
+    color: white;
+    text-decoration: black;
+}
+ nav a {
+     /*position: absolute;*/
+    float: right;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+/* Change the color of links on hover */
+ nav a:hover {
+    background-color: white;
+    color: #4DA8DA;
+}
+
+/* Add a color to the active/current link */
+ nav a.active {
+    background-color:#4DA8DA ;
+    color: black;
+}
+
+
+ul   {
+    list-style-type: none;
+}

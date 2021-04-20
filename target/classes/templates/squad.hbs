@@ -1,0 +1,63 @@
+
+{{#partial "content"}}
+    {{#if squads}}
+<div class="container">
+    <h2><b>SQUADS</b></h2>
+    {{#each squads}}
+    <table class="table table-striped table-dark">
+        <thead>
+        <tr>
+
+            <th scope="col">Name</th>
+            <th scope="col">Mission</th>
+            <th scope="col">Size</th>
+            <th scope="col">Members</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>{{ name }}</td>
+            <td> {{mission}}</td>
+            <td>{{ size }}</td>
+            <td>{{#each squadHeroes}}
+                {{this.name}},
+            {{/each}}</td>
+        </tr>
+        </tbody>
+    </table>
+
+        {{/each}}
+    <br>
+    <a class="btn btn-primary" href="/squad-form">Create Your Squad</a>
+    <br><br>
+    <h2><b>HEROES</b></h2>
+    {{#each heroes}}
+
+        <table class="table table-striped table-dark">
+            <thead>
+            <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Age</th>
+                <th scope="col">Power</th>
+                <th scope="col">Weakness</th>
+                <th scope="col">Action</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+
+                <td>{{ name }}</td>
+                <td>{{ age }}</td>
+                <td>{{ power }}</td>
+                <td>{{ weakness }}</td>
+               <td><a class="btn btn-primary" href="/squad/new/{{id}}">Add To Squad</a></td>
+            </tr>
+            </tbody>
+        </table>
+    {{/each}}
+</div>
+{{else}}
+    <h2>Please create a squad to continue</h2>
+{{/if}}
+{{/partial}}
+        {{> layout.hbs}}

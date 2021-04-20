@@ -2,9 +2,9 @@
 {{#partial "content"}}
     {{#if squads}}
 <div class="container">
-    <h2>SQUADS</h2>
+    <h2><b>SQUADS</b></h2>
     {{#each squads}}
-    <table class="table">
+    <table class="table table-striped table-dark">
         <thead>
         <tr>
 
@@ -12,7 +12,6 @@
             <th scope="col">Mission</th>
             <th scope="col">Size</th>
             <th scope="col">Members</th>
-            <th scope="col">Action</th>
         </tr>
         </thead>
         <tbody>
@@ -20,12 +19,9 @@
             <td>{{ name }}</td>
             <td> {{mission}}</td>
             <td>{{ size }}</td>
-            <td>{{#each squadMembers}}
-                {{this.name}}
+            <td>{{#each squadHeroes}}
+                {{this.name}},
             {{/each}}</td>
-            <td>
-            <a class="btn btn-primary" href="/new/member/{{id}}">Add member</a>
-        </td>
         </tr>
         </tbody>
     </table>
@@ -34,10 +30,10 @@
     <br>
     <a class="btn btn-primary" href="/squad-form">Create Your Squad</a>
     <br><br>
-    <h2>HEROES</h2>
+    <h2><b>HEROES</b></h2>
     {{#each heroes}}
 
-        <table class="table">
+        <table class="table table-striped table-dark">
             <thead>
             <tr>
                 <th scope="col">Name</th>
@@ -65,66 +61,3 @@
 {{/if}}
 {{/partial}}
         {{> layout.hbs}}
-
-<!--{{#partial "content"}}-->
-<!--    <section class="landing-pg">-->
-<!--        <div class="land-left">-->
-<!--        </div>-->
-<!--        <div class="land-right">-->
-<!--        </div>-->
-
-<!--        <div class="squad">-->
-<!--            <div id="newMember">-->
-<!--                <p class="close">&cross;</p>-->
-<!--                <h2>Choose Squad Members</h2>-->
-<!--                {{#each heroes}}-->
-<!--                    <div class="hero-item">-->
-<!--                        <img src="/img/DIAMONDHEAD06_4C.png" alt="">-->
-<!--                        <div class="hero-detail">-->
-<!--                            <p>Name: {{name}}</p>-->
-<!--                            <p>Super power: {{ power }}</p>-->
-<!--                            <a class="btns" href="/squad/new/{{id}}">Add To Squad</a>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                {{/each}}-->
-<!--            </div>-->
-<!--        <h2>-->
-<!--            <a class="btns" href="/squad-form">Create Your Squad</a>-->
-<!--            <br><br>-->
-<!--            {{#if squads}}-->
-<!--                AVAILABLE SQUADS-->
-<!--            </h2>-->
-<!--                {{#each squads}}-->
-<!--                    <div class="squad-cont">-->
-<!--                        <img src="" alt="">-->
-<!--                        <div>-->
-<!--                            <h1>{{ name }} </h1>-->
-<!--                            <p>Id: {{id}}</p>-->
-<!--                            <p>Purpose: {{mission}}</p>-->
-<!--                            <p>Max participants: {{ size }}</p>-->
-<!--                            <br><br>-->
-<!--                            <h3>MEMBERS</h3>-->
-<!--                            <a class="btns" href="/new/member/{{id}}">Bind Id</a>-->
-<!--                            <button class="addMember add-btn" >Add New Member</button>-->
-<!--                            {{#each squadHeroes}}-->
-<!--                                <div class="member-cont">-->
-<!--                                    <h5>Name: {{this.name}}</h5>-->
-<!--                                    <h5>Power: {{power}}</h5>-->
-<!--                                    <Button class="btns">Remove</Button>-->
-<!--                                </div>-->
-<!--                            {{/each}}-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                {{/each}}-->
-<!--            {{else}}-->
-<!--                <h2>Please create a squad to continue</h2>-->
-<!--            {{/if}}-->
-<!--        </div>-->
-
-<!--    </section>-->
-<!--{{/partial}}-->
-<!--{{#partial "footer"}}-->
-<!--    <script type="text/javascript" src="/js/jquery-3.4.0.min.js"></script>-->
-<!--    <script type="text/javascript" src="/js/script.js"></script>-->
-<!--{{/partial}}-->
-<!--{{> layout.hbs}}-->

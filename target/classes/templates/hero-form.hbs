@@ -1,0 +1,24 @@
+{{#partial "content"}}
+    <section>
+<form  class="form hero-form" action="/new/hero" method="post" style="width: 30rem; align-content: center">
+    <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" class="form-control" id="name" aria-describedby="emailHelp" placeholder="Hero's Name" name="name" required>
+    </div>
+    <div class="form-group">
+        <label for="age">Age</label>
+        <input type="number" class="form-control" id="age" placeholder="Age" name="age" required>
+    </div>
+    <div class="form-group">
+        <label for="power">Power</label>
+        <input type="text" class="form-control" id="power" name="power" placeholder="Power" required>
+    </div>
+    <div class="form-group">
+        <label for="power">Weakness</label>
+        <input type="text" class="form-control" id="weakness" name="weakness" placeholder="weakness" required >
+    </div>
+    <button type="submit" class="btn btn-primary hero-btn">Submit</button>
+</form>
+    </section>
+{{/partial}}
+{{> layout.hbs}}
