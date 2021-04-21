@@ -1,11 +1,9 @@
 package models;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class Squad {
     private int id;
-//    private  String squadHeroes;
     private String name;
     private String mission;
     private int size;
@@ -34,6 +32,7 @@ public class Squad {
         return name;
     }
 
+
     public int getSize() {
         return size;
     }
@@ -54,7 +53,4 @@ public class Squad {
 
     public static Squad createNewSquad(){return new Squad("Avengers","fight crime",5);}
     public static Squad createNewSquad1(){return new Squad("Teen Titans","rescue animals",3);}
-
-
-
 }

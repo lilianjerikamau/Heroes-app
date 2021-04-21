@@ -35,7 +35,7 @@ public class SquadTest {
             assertTrue(Squad.getInstances().contains(another));
         }
         @Test
-        public void newSquad_getSquadMembers_Array() {
+        public void newSquad_getSquadHeroes_Array() {
             Squad newSquad = Squad.createNewSquad();
             Heroes newHero = Heroes.createNewHero();
             Heroes newHero1 = Heroes.createNewHero1();
