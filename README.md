@@ -1,6 +1,9 @@
 # Heroes App
 This is a java application that allows users to create heroes and squad and add heroes to given squads
 
+## Author
+[Lilian Kamau](https://github.com/lilianjerikamau/lilianjerikamau.github.io)
+
 ## Technologies
 
 This project was generated with
@@ -32,6 +35,9 @@ If you want to put out a pull request you first have to send us the sample code 
 ## Versioning
 
 We use Github for versioning. This is the first version of this application
+
+## Live Demo
+https://heroesapp.herokuapp.com/squad
 
 ## License & copyright
 
