@@ -18,7 +18,7 @@ public class SquadTest {
             assertEquals("Avengers",newSquad.getName());
         }
         @Test
-        public void newSquad_getSize_Int() {
+        public void newSquadShouldGetIntSize() {
             Squad newSquad = Squad.createNewSquad();
             assertEquals(5,newSquad.getSize());
         }
