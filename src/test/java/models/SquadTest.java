@@ -23,7 +23,7 @@ public class SquadTest {
             assertEquals(5,newSquad.getSize());
         }
         @Test
-        public void newSquad_getPower_String() {
+        public void newSquadShouldGetPowerString() {
             Squad newSquad = Squad.createNewSquad();
             assertEquals("fight crime",newSquad.getMission());
         }
