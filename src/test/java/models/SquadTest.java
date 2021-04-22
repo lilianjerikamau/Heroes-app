@@ -8,34 +8,34 @@ import static org.junit.jupiter.api.Assertions.*;
 public class SquadTest {
 
     @Test
-        public void newSquadShouldInstantiateCorrectly() {
+        public void newSquad_instantiatesCorrectly_true() {
             Squad newSquad = Squad.createNewSquad();
             assertTrue(true);
         }
         @Test
-        public void newSquadShouldGetStringName() {
+        public void newSquad_getName_String() {
             Squad newSquad = Squad.createNewSquad();
             assertEquals("Avengers",newSquad.getName());
         }
         @Test
-        public void newSquadShouldGetIntSize() {
+        public void newSquad_getSize_Int() {
             Squad newSquad = Squad.createNewSquad();
             assertEquals(5,newSquad.getSize());
         }
         @Test
-        public void newSquadShouldGetPowerString() {
+        public void newSquad_getPower_String() {
             Squad newSquad = Squad.createNewSquad();
             assertEquals("fight crime",newSquad.getMission());
         }
         @Test
-        public void newSquadShouldGetInstances() {
+        public void newSquad_getInstances_true() {
             Squad newSquad = Squad.createNewSquad();
             Squad another = Squad.createNewSquad();
             assertTrue(Squad.getInstances().contains(newSquad));
             assertTrue(Squad.getInstances().contains(another));
         }
         @Test
-        public void newSquadGetSquadHeroesArray() {
+        public void newSquad_getSquadHeroes_Array() {
             Squad newSquad = Squad.createNewSquad();
             Heroes newHero = Heroes.createNewHero();
             Heroes newHero1 = Heroes.createNewHero1();
