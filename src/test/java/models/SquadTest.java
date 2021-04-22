@@ -28,7 +28,7 @@ public class SquadTest {
             assertEquals("fight crime",newSquad.getMission());
         }
         @Test
-        public void newSquad_getInstances_true() {
+        public void newSquadShouldGetInstances() {
             Squad newSquad = Squad.createNewSquad();
             Squad another = Squad.createNewSquad();
             assertTrue(Squad.getInstances().contains(newSquad));
