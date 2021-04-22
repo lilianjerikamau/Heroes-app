@@ -1,4 +1,12 @@
 
+@import url("https://fonts.googleapis.com/css2?family=Poppins&family=Share+Tech+Mono&display=swap");
+
+html{
+    font-family: Share Tech Mono, monospace;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
 .spiderman {
     position: fixed;
     top: 50%;
@@ -28,6 +36,7 @@ body{
     background-color: #12232E;
     background-image: url("https://fastly.syfy.com/sites/syfy/files/styles/1200x680/public/2020/08/the-seven-the-boys-season-2.jpg?offset-y=0");
     object-fit: cover;
+    font-family: Share Tech Mono, monospace;
 
 }
 .hero-form{

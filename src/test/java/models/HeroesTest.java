@@ -7,7 +7,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class HeroesTest {
 
-    @org.junit.Test
+    @Test
     public void newHero_instantiatesCorrectly_true() {
         Heroes newHero = Heroes.createNewHero();
         assertTrue(newHero instanceof Heroes);
