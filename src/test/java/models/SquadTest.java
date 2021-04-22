@@ -8,7 +8,7 @@ import static org.junit.jupiter.api.Assertions.*;
 public class SquadTest {
 
     @Test
-        public void newSquad_instantiatesCorrectly_true() {
+        public void newSquadShouldInstantiateCorrectly() {
             Squad newSquad = Squad.createNewSquad();
             assertTrue(true);
         }
